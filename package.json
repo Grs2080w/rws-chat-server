@@ -8,7 +8,8 @@
 	"main": "index.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "tsc && node dist/index.js"
+		"start": "node dist/index.js",
+		"build": "tsup src"
 	},
 	"dependencies": {
 		"@types/cors": "^2.8.17",
@@ -21,6 +22,7 @@
 		"jsonwebtoken": "^9.0.2",
 		"socket.io": "^4.8.1",
 		"socket.io-client": "^4.8.1",
+		"tsup": "^8.4.0",
 		"uuid": "^11.1.0",
 		"winston": "^3.17.0"
 	},
