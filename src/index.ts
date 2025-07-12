@@ -163,8 +163,11 @@ io.on("connection", async (socket) => {
 	 */
 
 	socket.on("message", (data) => {
-		let hours = new Date().toLocaleString()
-		hours = hours.slice(11, 17)
+		let hours = new Date().toLocaleTimeString("pt-BR", {
+			timeZone: "America/Sao_Paulo",
+			hour: "2-digit",
+			minute: "2-digit",
+		  })
 
 		if (data.message.includes("data:image")) {
 			io.to(roomUser!).emit("message", { ...data, type: "image", idMessage: v4(), hours })
@@ -210,5 +213,5 @@ io.on("connection", async (socket) => {
 })
 
 server.listen(PORT, () => {
-	console.log("Server running on port 3000")
+	console.log("Server running on port " + PORT)
 })
