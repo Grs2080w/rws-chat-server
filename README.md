@@ -1,3 +1,6 @@
+>
+> THIS REPO IS DEPRECATED! SEE [NWSC](https://github.com/Grs2080w/nwsc) REPOSITORY FOR THE NEW VERSION.
+
 # RWS Chat Server
 
 ## Description
